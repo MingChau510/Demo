@@ -3,18 +3,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-    Rigidbody2D rb;
 
-    void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-    void FixedUpdate()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        mousePosition.z = transform.position.z;
 
-        rb.linearVelocity = new Vector2(h, v) * speed;
+        transform.position = Vector3.MoveTowards(transform.position, mousePosition, speed * Time.deltaTime);
     }
 }

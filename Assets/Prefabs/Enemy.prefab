@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 1256919155770891852}
   - component: {fileID: 7745002282118758954}
   - component: {fileID: 7522716493606028405}
-  - component: {fileID: 1019742068948901886}
+  - component: {fileID: -3693801178293457930}
+  - component: {fileID: 7342755078968789450}
+  - component: {fileID: 2479135960034614429}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.20497, y: 0.6809, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,7 +169,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1019742068948901886
+--- !u!114 &-3693801178293457930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492749501317351843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684bde8a0d10cff4db73cadaef2f2552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  speed: 2
+--- !u!114 &7342755078968789450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,3 +194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebc19187e1f476458d52cd2875f374a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  explosionPrefab: {fileID: 2753009274841817172, guid: 14bf37809f4862f43867b7954d57fc0f, type: 3}
+--- !u!114 &2479135960034614429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492749501317351843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae578a1d327df8a4e83ae93eec89a12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  damage: 1
